@@ -1,0 +1,31 @@
+body {
+    background: url('https://xmple.com/wallpaper/gradient-blue-white-linear-2160x1080-c2-ffffff-00bfff-a-225-f-14.svg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .container {
+    margin-top: 50px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    text-decoration:double;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-display: fallback;
+    font-weight: bold;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    text-decoration:underline;
+    font-family:Arial, Helvetica, sans-serif;
+    font-display: fallback;
+    font-weight: bold;
+  }
+  

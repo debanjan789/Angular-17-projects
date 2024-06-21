@@ -1,0 +1,21 @@
+<div *ngIf="hourlyWeather" class="card text-white mb-3">
+  <div class="card-body">
+    <h1 class="card-title text-center">Hourly Forecast</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div *ngFor="let weather of hourlyWeather.slice(0, 6)" class="hourly-box">
+          <p class="mb-1">{{ formatTime(weather.dt) }}</p>
+          <img [src]="getWeatherIcon(weather.weather[0].icon)" alt="Weather icon" class="weather-icon">
+          <p>{{ weather.main.temp }}°{{ unit === 'metric' ? 'C' : 'F' }}</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div *ngFor="let weather of hourlyWeather.slice(6, 12)" class="hourly-box">
+          <p class="mb-1">{{ formatTime(weather.dt) }}</p>
+          <img [src]="getWeatherIcon(weather.weather[0].icon)" alt="Weather icon" class="weather-icon">
+          <p>{{ weather.main.temp }}°{{ unit === 'metric' ? 'C' : 'F' }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

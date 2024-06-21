@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background: url('https://xmple.com/wallpaper/gradient-blue-white-linear-2160x1080-c2-ffffff-00bfff-a-225-f-14.svg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .card {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .card-title, .card-subtitle {
+    color: #ffd700;
+  }
+  

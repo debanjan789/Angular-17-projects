@@ -1,0 +1,40 @@
+<div *ngIf="weather" class="card text-white mb-3">
+  <div class="card-body text-center">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="card-title text-center mx-auto">{{ weather.name }}</h2>
+      <button class="btn btn-primary" (click)="toggleUnit()">
+        Switch to {{ unit === 'metric' ? '°F' : '°C' }}
+      </button>
+    </div>
+    <h4 class="card-subtitle mb-2">{{ weather.weather[0].description }}</h4>
+    <img [src]="getWeatherIcon(weather.weather[0].icon)" alt="Weather icon" class="weather-icon">
+    <h1 class="display-4">{{ weather.main.temp }}°{{ unit === 'metric' ? 'C' : 'F' }}</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <h5 class="card-text">
+          <i class="fas fa-tint"></i> Humidity: {{ weather.main.humidity }}%
+        </h5>
+        <h5 class="card-text">
+          <i class="fas fa-wind"></i> Wind: {{ weather.wind.speed }} {{ unit === 'metric' ? 'm/s' : 'mph' }} ({{ getWindDirection(weather.wind.deg) }})
+        </h5>
+        <h5 class="card-text">
+          <i class="fas fa-cloud-rain"></i> Rain: {{ weather.rain?.['1h'] || weather.rain?.['3h'] }} mm
+        </h5>
+      </div>
+      <div class="col-md-6">
+        <h5 class="card-text">
+          <i class="fas fa-tachometer-alt"></i> pressure: {{ weather.main.pressure }} hpa
+        </h5>
+        <h5 class="card-text">
+          <i class="fas fa-cloud"></i> Cloudiness: {{ weather.clouds.all }}%
+        </h5>
+        <h5 class="card-text">
+          <i class="fas fa-sun"></i> Sunrise: {{ formatTime(weather.sys.sunrise) }}
+        </h5>
+        <h5 class="card-text">
+          <i class="fas fa-moon"></i> Sunset: {{ formatTime(weather.sys.sunset) }}
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>

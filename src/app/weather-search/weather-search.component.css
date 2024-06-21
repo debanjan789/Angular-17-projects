@@ -1,0 +1,15 @@
+.input-group {
+  margin-top: 20px;
+}
+
+.input-group input {
+  border-radius: 10px 0 0 10px;
+}
+
+.input-group .btn-primary {
+  border-radius: 0 10px 10px 0;
+}
+
+.input-group .btn-primary:hover {
+  background-color: #1976d2;
+}
